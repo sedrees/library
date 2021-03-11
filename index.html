@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shandy's Library</title>
+        <link rel="stylesheet" href="styles/semantic.min.css">
+        <link rel="stylesheet" href="styles/css.css">
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1 class="ui center aligned header">Shandy&rsquo;s Library</h1>
+                <button class="medium ui button" id="add">Add Book</button>
+            </header>
+            <section id="books" class="ui three column doubling grid container">
+            </section>
+        </main>
+        <div class="modal">
+            <div class="modal-content">
+                <h2>Add Book</h2>
+                <form id="addBook" class="ui form" method="POST">
+                    <label for="title">Title</label>
+                    <input name="title" type="text" class="ui input">
+                    <label for="author">Author</label>
+                    <input name="author" type="text" class="ui input">
+                    <label for="pages">Pages</label>
+                    <input name="pages" type="number" class="ui input">
+                    <label for="published">Year Published</label>
+                    <input name="published" type="text" class="ui input">
+                    <div class="two fields">
+                        <div class="field">
+                            <label for="genre1">Primary Genre</label>
+                            <select class="ui fluid dropdown" name="genre1">
+                                <option value="">Genre</option>
+                                <option value="adventure">Adventure</option>
+                                <option value="fantasy">Fantasy</option>
+                                <option value="historical">Historical</option>
+                                <option value="horror">Horror</option>
+                                <option value="mystery">Mystery</option>
+                                <option value="nonfiction">Non-fiction</option>
+                                <option value="poetry">Poetry</option>
+                                <option value="romance">Romance</option>
+                                <option value="scifi">Sci-fi</option>
+                                <option value="selfhelp">Self-help</option>
+                                <option value="thriller">Thriller</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label for="genre2">Secondary Genre</label>
+                            <select class="ui fluid dropdown" name="genre2">
+                                <option value="">Genre</option>
+                                <option value="adventure">Adventure</option>
+                                <option value="fantasy">Fantasy</option>
+                                <option value="historical">Historical</option>
+                                <option value="horror">Horror</option>
+                                <option value="mystery">Mystery</option>
+                                <option value="nonfiction">Non-fiction</option>
+                                <option value="poetry">Poetry</option>
+                                <option value="romance">Romance</option>
+                                <option value="scifi">Sci-fi</option>
+                                <option value="selfhelp">Self-help</option>
+                                <option value="thriller">Thriller</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="read">
+                            <label for="read">Read it yet?</label>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <div class="ui buttons">
+                            <button class="ui positive button" id="addSubmit" type="submit">Submit</button>
+                            <div class="or"></div>
+                            <button class="ui button close" type="reset">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="js.js"></script>
+    </body>
+</html>
