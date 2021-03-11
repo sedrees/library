@@ -41,10 +41,10 @@ header {
 
 .genre {
     width:70px;
-    height: 80px;
+    height: 70px;
     margin:0.2rem;
     display:inline-block;
-    border:8px solid #5d4f84;
+    border:8px solid #d0cfca;
     border-radius:100%;
     background-color:#e6e6e6;
     background-position:center center;
