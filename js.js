@@ -151,9 +151,12 @@ const theLastEmperox = new Book("The Last Emperox", "John Scalzi", 0, 320, 2020,
 const whenNoOneIsWatching = new Book("When No One Is Watching", "Alyssa Cole", 0, 352, 2020, "thriller", "mystery");
 const theHennaArtist = new Book("The Henna Artist", "Alka Joshi", 0, 384, 2020, "historical");
 
-addBook(fromBloodAndAsh);
-addBook(theLastEmperox);
-addBook(whenNoOneIsWatching);
-addBook(theHennaArtist);
+if(myLibrary.length < 1) {
+    addBook(fromBloodAndAsh);
+    addBook(theLastEmperox);
+    addBook(whenNoOneIsWatching);
+    addBook(theHennaArtist);
+}
+
 
 loadBooks();
