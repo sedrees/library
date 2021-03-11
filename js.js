@@ -41,6 +41,23 @@ function displayBook(book) {
     }
     inner.appendChild(deleteBtn);
 
+    let genreContainer = document.createElement('div');
+    genreContainer.classList.add('genres');
+
+    let firstGenre = document.createElement('div');
+    firstGenre.classList.add('genre', book.genre1);
+    firstGenre.setAttribute('role', 'img');
+    genreContainer.appendChild(firstGenre);
+
+    if (book.genre2) {
+        let secondGenre = document.createElement('div');
+        secondGenre.classList.add('genre', book.genre2);
+        secondGenre.setAttribute('role', 'img');
+        genreContainer.appendChild(secondGenre);
+    }
+
+    inner.appendChild(genreContainer);
+
     let title = document.createElement('h2');
     title.textContent = book.title;
     inner.appendChild(title);
@@ -57,27 +74,20 @@ function displayBook(book) {
     let length = document.createElement('h4');
     length.textContent = book.pages+" pages";
     inner.appendChild(length);
-
-    let genreContainer = document.createElement('div');
-    genreContainer.classList.add('genres');
-
-    let firstGenre = document.createElement('div');
-    firstGenre.classList.add('genre', book.genre1);
-    genreContainer.appendChild(firstGenre);
-
-    if (book.genre2) {
-        let secondGenre = document.createElement('div');
-        secondGenre.classList.add('genre', book.genre2);
-        genreContainer.appendChild(secondGenre);
-    }
-
-    inner.appendChild(genreContainer);
     
     let toggler = document.createElement('div');
     toggler.classList.add('ui', 'checkbox');
     let input = document.createElement('input');
     input.setAttribute('type', 'checkbox', 'name', 'readState');
     let label = document.createElement('label');
+    input.onclick = function() {
+        if (!book.read) {
+            let idx = myLibrary.find(item => item.id == book.id);
+            idx["read"] = 1;
+            label.textContent = "Read";
+            localStorage.setItem("library", JSON.stringify(myLibrary));
+        }
+    }
     if (book.read) {
         label.textContent = "Read";
         input.setAttribute('checked', true);

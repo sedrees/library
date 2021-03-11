@@ -1,20 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,700&display=swap');
+
+body { 
+    background-color:#f1ede5; 
+    font-family:"Merriweather", Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
 header { 
     text-align:center;
-    margin:2rem 0; 
+    padding:3rem 0; 
 }
+#add { background-color:#4eaf65 }
 
 .book button {
     float:right;
 }
 
-.book h2, .book h3, .book h4, .book h5 {
-    margin:0;
+.book h2 {
+    font-weight:700;
+    font-style:italic;
+    font-size:2.25rem;
+}
+
+.book h3, .book h4 {
+    font-weight:400;
 }
 
 .book h4 {
     display:inline;
 }
 
+.book .checkbox {
+    float:right;
+}
 .published:after {
     content:'\02022';
     margin:0 1%;
@@ -23,15 +40,15 @@ header {
 /* -- Book Genre Icons -- */
 
 .genre {
-    width:100px;
-    height: 106px;
-    margin:1rem;
+    width:70px;
+    height: 80px;
+    margin:0.2rem;
     display:inline-block;
-    border:14px solid #452f82;
+    border:8px solid #5d4f84;
     border-radius:100%;
     background-color:#e6e6e6;
     background-position:center center;
-    background-size:50px;
+    background-size:38px;
     background-repeat:no-repeat;
 }
 
@@ -125,9 +142,17 @@ header {
     margin-bottom:1rem;
 }
 
+#addBook label {
+    font-weight:400;
+}
+
 .form-submit {
     text-align:center;
     margin-top:2rem;
+}
+
+.ui.buttons .button {
+    font-style:italic;
 }
 
 .book button:hover {
